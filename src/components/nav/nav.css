@@ -1,0 +1,234 @@
+.n{
+  width: 100%;
+  height:auto;
+  background-color: #172518;
+  position: fixed;
+  top:0;
+  z-index: 10;
+  display: grid;
+  padding: 1vw 0 1.5rem 0;
+  grid-column-gap: 0px;
+  grid-template-columns: 10vw 40vw 40vw;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+}
+
+.n-logo-wrapper{
+height: 50px;
+grid-column-start: 2;
+cursor: pointer;
+display: inline-block;
+}
+.n-can-seebg{
+background-color: #172518;
+}
+.n-links{
+  height: 50%;
+  grid-row-start: 1;
+  grid-column-start:3;
+  grid-column-end:4;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
+  padding: 0;
+  position: relative;
+}
+.n-link{
+  color: #EA7F1E;
+  list-style: none;
+  font-weight: bold;
+}
+.n-link a{
+  border-radius: 0vw;
+  color: #EA7F1E;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.hambuger{
+  position: absolute;
+  top:.6rem;
+  left: -50vw;
+  width: 100vw;
+  display: none;
+  text-align: right;
+}
+#menuToggle
+{
+display: block;
+position: relative;
+display: flex;
+flex-direction: column;
+z-index: 1;
+align-items: flex-end;
+-webkit-user-select: none;
+user-select: none;
+}
+#wrapper{}
+#menuToggle a
+{
+text-decoration: none;
+color: #232323;
+
+transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+color: #EA7F1E;
+}
+
+
+#menuToggle input
+{
+display: block;
+width: 40px;
+height: 32px;
+position: absolute;
+top: -7px;
+right: -5px;
+cursor: pointer;
+
+opacity: 0; /* hide this */
+z-index: 2; /* and place it over the hamburger */
+
+-webkit-touch-callout: none;
+}
+
+/*
+* Just a quick hamburger
+*/
+#menuToggle span
+{
+display: block;
+width: 33px;
+height: 4px;
+margin-bottom: 5px;
+position: relative;
+
+background: #EA7F1E;
+border-radius: 3px;
+
+z-index: 1;
+
+transform-origin: 4px 0px;
+
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+transform-origin: 0% 100%;
+}
+
+/* 
+* Transform all the slices of hamburger
+* into a crossmark.
+*/
+#menuToggle input:checked ~ span
+{
+opacity: 1;
+transform: rotate(45deg) translate(-2px, -1px);
+background: #232323;
+}
+
+/*
+* But let's hide the middle one.
+*/
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+* Ohyeah and the last one should go the other direction
+*/
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+#menu
+{
+position: absolute;
+width: fit-content;
+top:0;
+right:0;
+height: 150vh;
+margin: -1.6rem 0;
+background: #FEFAC6;
+display: flex;
+text-align: left;
+flex-direction: column;
+list-style-type: none;
+-webkit-font-smoothing: antialiased;
+/* to stop flickering of text in safari */
+padding: 50px 0;
+transform-origin: 0% 0%;
+transform: translate(200%, 0);
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu::before{
+content: "";
+width: 50vw;
+height: 1000%;
+background-color: rgba(0,0,0,0.5);
+position: absolute;
+top:0;
+left: -50vw;
+z-index: -1;
+}
+#menu a li
+{
+padding: 10px;
+font-size: 20px;
+font-weight: normal;
+
+transition-delay: 2s;
+}
+
+/*
+* And let's slide it in from the left
+*/
+#menuToggle input:checked ~ ul
+{
+transform: none;
+}
+.n-socials{
+background-color: rgba(0,0,0,0.2);
+position: relative;
+height: 50px;
+width: 100%;
+flex-grow: 1;
+padding-bottom: 200px;
+box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  .n{
+      padding: 1vw 0 1em 0;
+  }
+  .n-links{
+      align-items: center;
+      justify-content: right;
+  }
+  .n-link{
+      display: none;
+  }
+  .hambuger{
+      display: block;
+  }
+}

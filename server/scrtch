@@ -1,0 +1,24 @@
+var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Access-Control-Request-Headers", "*");
+    myHeaders.append("api-key", "WFetxORZs7nvoexnW0iL08KgqXpdYmZiq4rqDw8OQID71a8dr1IpOoeplBRdTX2N");
+    myHeaders.append("Accept", "application/json");
+    myHeaders.append("Access-Control-Allow-Origin", "*");
+
+    var raw = JSON.stringify({
+      "dataSource": "Innov8Learn",
+      "database": "Innov8Learn",
+      "collection": "Courses"
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+
+    fetch("https://data.mongodb-api.com/app/data-vdakt/endpoint/data/v1/action/find", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));

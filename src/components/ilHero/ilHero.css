@@ -1,0 +1,18 @@
+.Ih{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #172518;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 5rem 0;
+    padding-top: 10rem;
+    color:white;
+    font-size: 4rem;
+}
+@media screen and (max-width: 1000px) {
+    .Ih{
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,134 @@
+.f{
+    height: fit-content;
+    
+  font-family: 'Montserrat', sans-serif;
+    background-color: #D9F0CF;
+    display: grid;
+    grid-template-columns: 10vw 80vw;
+}
+.f-sec{
+}
+.f-main{
+    display: flex;
+    height: 80%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.f-main-section{
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+.f-sec-1{
+    flex:2;
+}
+.f-logo{
+    width: 7vw;
+    margin-top:1em;
+}
+.f-sec-2{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+}
+.f-main-section-mid1{
+    flex:2
+}
+.f-main-section-mid2{
+    flex: 3;;
+}
+.f-sec-3{
+    flex:3;
+    padding-left: 4em;
+}
+.f-facebook-header{
+    
+        display: flex;
+        justify-content: left;
+        align-items: center;
+}
+.f-section-header{
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+}
+.f-section-p{
+    font-size: .8em;
+}
+.f-copy{
+    width: 100%;
+    height: 50px;
+    background-color: #A8DB93;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+}
+.f-copy-inner{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.f-copy-socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.f-copy-socials a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    color: rgba(0,0,0,0.7);
+}
+.f-copy-socials a :hover{
+    color: #635831;
+    
+}
+@media screen and (max-width: 480px) {
+    .f-main{
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0;
+    }
+    .f-section-header{
+        margin-bottom: 2.5vw;
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+    .f-section-p{
+        font-size: 0.75rem;
+    }
+    .f-main-section{
+        min-width: 80vw;
+    }
+    .f-sec{
+        margin: 0;
+        padding: 0;
+    }
+    .f-sec-3{
+    }
+    .f-copy{
+        height: fit-content;
+    }
+    .f-copy-at{
+        font-size: .7rem;
+        margin: 1rem;
+    }
+    .f-copy-inner{
+        flex-direction: column;
+        width: 100%;
+    }
+    .f-copy-socials{
+        margin-bottom: 1rem;
+    }
+    .f-logo{
+        width: 5rem;
+        margin-top:1em;
+    }
+}

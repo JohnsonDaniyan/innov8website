@@ -1,0 +1,78 @@
+.button-swipeGrad {
+	cursor: pointer;
+	border-radius: 1em;
+	background: transparent;
+	color: black;
+	border: none;
+	padding: 1rem 1rem;
+	position: relative;
+	overflow: hidden;
+	font-size: inherit;
+	font-weight: inherit;
+	z-index: 2;
+	transition: color 1s, background .5s;
+	font-family: inherit ;
+	text-transform: inherit;
+	
+    letter-spacing: inherit;
+}
+.button-swipeGrad:after {
+	content: attr( value );
+	display: block;
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: inherit;
+	padding: inherit;
+}
+.button-swipeGrad:hover:before {
+	left: -800%;
+	right: 0;
+}
+.button-swipeGrad:hover {
+	color: white;
+}
+
+.button-swipeGrad:before {
+	content: " ";
+	display: block;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	right: -200%;
+	top: 0;
+	bottom: 0;
+	
+	transition: left 1s, right 1s;
+}
+
+
+.button-swipeGrad.button-swipeGrad.lightgreen:before{
+	transition: left 1s, right 1s;
+}
+.button-swipeGrad.pvblue:before {
+	background: linear-gradient(90deg, #93caf1 0%, #93caf1 60%, #1071B6);
+}
+.button-swipeGrad.pvblue,.button-swipeGrad.pvgreen{
+	padding: 1rem;
+}
+.button-swipeGrad.pvgreen:before {
+	background: linear-gradient(90deg, #DDE4AF 0%, #DDE4AF 60%, #326E35);
+}
+.button-swipeGrad.green:before {
+	background: linear-gradient(90deg, #DDE4AF 0%, #DDE4AF 60%, rgba(50, 110, 53, 0.81) 90%);
+}
+.button-swipeGrad.lightgreen:before {
+	background: linear-gradient(90deg, #172518 0%, #172518 60%, #326E35 90%);
+}
+.button-swipeGrad.lightgreen{
+	color: #EA7F1E;
+	font-weight: bold;
+	width: fit-content;
+}
+.left-round{
+	/* border: 2px solid rgba(50, 110, 53, 0.16); */
+	border-right: 0 none transparent;
+	border-radius: 1rem 0 0 1rem;
+}

@@ -1,0 +1,43 @@
+{
+    "courses": [
+        {
+            "_id": "63283b797fbc6b27ccb2a544",
+            "cat": "mechatronics",
+            "code": "plc",
+            "desc": "This course is a practical oriented training on Programmable Logic Controls and how Computerized Control System allows us to use computer software to supervise the operation of an automated process",
+            "format": [
+                {
+                    "modules": "6",
+                    "lessons": "19"
+                }
+            ],
+            "title": "Programmable Logic Control (PLC) with Ladder Diagrams"
+        },
+        {
+            "_id": "63283b797fbc6b27ccb2a545",
+            "cat": "programming",
+            "code": "aar",
+            "title": "All About Robotics (AAR)",
+            "desc": "The Course is targeted at young kids interested in areas of science, mathematics and engineering. Learners will be introduced to Robotics, the sensors used such as; Touch, IR, Light, Color, Gyroscopes, etc.",
+            "format": [
+                {
+                    "modules": "3",
+                    "lessons": "46"
+                }
+            ]
+        },
+        {
+            "_id": "63283b797fbc6b27ccb2a546",
+            "cat": "cad/visualization",
+            "code": "3dp",
+            "title": "3D Printing and Digital Scanner Technology",
+            "desc": "This Course development Prepare students for careers being reshaped by 3D printing technology. By combining in-depth lectures and class discussions with exciting hands-on projects, students will gain the theoretical and practical knowledge they need to wield this transformative technology in the real world",
+            "format": [
+                {
+                    "modules": "11",
+                    "lessons": "55"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+.rf-wrapper{
+    display: grid;
+    grid-template-columns: minmax(10vw,1vw) minmax(80vw,1vw);
+    
+  font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+.rf-content-wrapper{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-bottom: 2em;
+}
+.rf-header{
+    text-align: left;
+    font-size: 2.5em;
+    margin-top: 4rem;
+}
+.rf-cards-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 6.81em;
+}
+.rf-card{
+    
+    /* border-radius: 0.3rem 0.3rem 0 0 ; */
+}
+
+@media screen and (max-width: 600px) {
+    .rf-cards-wrapper{
+        flex-direction: column;
+        margin-top: 0.9000000000000004rem;
+    }
+    .rf-card{
+        margin-bottom: 2rem;
+    }
+}

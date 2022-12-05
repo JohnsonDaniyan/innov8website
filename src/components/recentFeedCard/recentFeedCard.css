@@ -1,0 +1,103 @@
+.rfc{
+    width: 25vw;
+    height: 22.5em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.rfc:hover .rfc-img{
+    filter: brightness(.7);
+}
+.rfc-link{
+    background-color: red;
+    
+}
+.rfc-socialStuff{
+    background-color: white;
+    height:4.25em;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    border: 1px solid #9C0909;
+}
+.rfc-star{
+    font-size: 1.5em;
+    position: absolute;
+    right: 1.75em
+}
+.rfc-comments{
+    margin-left: 1.25em;
+}
+.rfc-likes{
+    padding-left: 1.25em;
+    
+}
+svg{
+    height: auto;
+}
+.rfc-text{
+    margin-left: 0.43em;
+    transform: translateY(-10%);
+}
+.rfc-comments,.rfc-likes{
+    font-size: 1.19em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rfc-img-wrapper{
+    height: 18.25em;
+    width: 100%;
+    position: relative;
+}
+.rfc-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    filter: brightness(.3);
+    transition: filter .4s;
+}
+.rfc-header{
+    z-index: 2;
+    color: white;
+    margin-top: 0;
+    font-size: 1.25rem;
+    text-align: left;
+    width: 17.31rem;
+    position: absolute;
+    left:1.12rem;
+    top: 10.87rem;
+}
+.rfc-date{
+    z-index: 2;
+    color: white;
+    margin-top: 0;
+    font-size: 0.88rem;
+    text-align: left;
+    width: 17.31rem;
+    position: absolute;
+    left:1.12rem;
+    bottom: 0.56rem;
+    font-weight: normal;
+}
+@media screen and (max-width: 600px) {
+    .rfc{
+        width: 100%;
+        height: fit-content;
+    }
+    .rfc-header{
+        top: 5rem
+    }
+    .rfc-date{
+        bottom: 5rem;
+    }
+}
