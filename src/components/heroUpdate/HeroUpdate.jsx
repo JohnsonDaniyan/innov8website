@@ -10,6 +10,8 @@ import greenSmallrob from "../../images/hero/greenSmall.svg"
 import orangeSmallrob from "../../images/hero/orangeSmall.svg"
 import logo from '../../images/Innov8 LOGO.svg'
 import tetfund from '../../images/partners/ptr-img4.png'
+import {AiOutlineArrowLeft} from 'react-icons/ai'
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 function HeroUpdate() {
   let [turns,setTurns] = useState(0)
@@ -30,9 +32,18 @@ function HeroUpdate() {
       console.log(facing)
       setTurns(turns-=90);
     }
+    const moveBack=()=>{
+      if (facing!==0){setFacing(facing-=1)}else{setFacing(3)}
+      console.log(facing)
+      setTurns(turns+=90);
+    }
 
   return (
-    <div onClick={()=>{move()}} className={`h ${" h-"+facing}`} >
+    <div  className={`h ${" h-"+facing}`} >
+      <div className="controls bg-black/40 text-white absolute bottom-0 z-20 flex w-screen justify-around text-xl">
+        <div onClick={()=>{moveBack()}} className=" p-2 cursor-pointer w-1/2 flex justify-center transition hover:bg-white hover:text-black"><AiOutlineArrowLeft /></div>
+        <div onClick={()=>{move()}} className=" p-2 cursor-pointer w-1/2 flex justify-center transition hover:bg-white hover:text-black"><AiOutlineArrowRight /></div>
+      </div>
     <img src={greenSmall} alt="" className={`h-green-small h-small ${facing === 0? "h-green-hide":""}`} />
       <img src={orangeSmall} alt="" className={`h-orange-small h-small ${facing === 0? "h-orange-hide":""}`} />
     <img src={greenSmallrob} alt="" className={`h-green-smallrob h-small h-rob${facing === 2? "":" h-green-hiderob"}`} />
