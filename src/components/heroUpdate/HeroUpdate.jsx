@@ -40,7 +40,7 @@ function HeroUpdate() {
 
   return (
     <div  className={`h ${" h-"+facing}`} >
-      <div className="controls bg-black/40 text-white absolute bottom-0 z-20 flex w-screen justify-around text-xl">
+      <div className="controls bg-black/40 text-white absolute bottom-0 z-20 flex w-screen justify-around text-xl sm:bottom-auto top-0">
         <div onClick={()=>{moveBack()}} className=" p-2 cursor-pointer w-1/2 flex justify-center transition hover:bg-white hover:text-black"><AiOutlineArrowLeft /></div>
         <div onClick={()=>{move()}} className=" p-2 cursor-pointer w-1/2 flex justify-center transition hover:bg-white hover:text-black"><AiOutlineArrowRight /></div>
       </div>
