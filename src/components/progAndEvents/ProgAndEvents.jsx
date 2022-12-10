@@ -104,7 +104,7 @@ function ProgAndEvents() {
   }
   return (
     <div id="programs" className='pande' ref={ref}>
-      <div className="pande-controls-wrapper">
+      <div className="pande-controls-wrapper md:pointer-events-none">
         <div onClick={moveRight} className="pande-control pande-controls-left"><SiPlex/></div>
         
         <div onClick={moveLeft} className="pande-control pande-controls-right"><SiPlex/></div>
@@ -113,7 +113,7 @@ function ProgAndEvents() {
       <img src={vectorBottom} alt="" className="vectorBottom" />
       
       <img src={innov8Logo} alt="" className="floatingLogo1" />
-        <div   className="pande-slider-wrapper">
+        <div   className="pande-slider-wrapper ">
         <motion.div 
 
         initial="closed"

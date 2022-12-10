@@ -2,6 +2,8 @@ import {React, useRef, useState, useEffect} from 'react'
 import Newsletter from '../newsletter/Newsletter'
 import './dontMiss.css'
 import sittingLady from '../../images/dm/womanSitting.png'
+import bg from '../../images/dm/bg.png'
+
 function DontMiss() {
   const imgStyle={
     width:"100%",height:"5rem"
@@ -19,6 +21,7 @@ const myRef = useRef();
     
     
     <div ref={myRef} className="dm-wrapper">
+      <img src={bg} alt="" className='w-full h-full absolute object-cover md:object-contain opacity-50 '/>
       <div className="dm-content">
       <div className={`dm-bell-wrapper ${dmVisible ? "dm-bell-wrapper-hide" : ""}`} >
         <div className={`dm-bell ${dmVisible ? "dm-bell-hide" : ""}`} >

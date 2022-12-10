@@ -12,6 +12,7 @@ import logo from '../../images/Innov8 LOGO.svg'
 import tetfund from '../../images/partners/ptr-img4.png'
 import {AiOutlineArrowLeft} from 'react-icons/ai'
 import {AiOutlineArrowRight} from 'react-icons/ai'
+import Button2 from '../button2/Button2'
 
 function HeroUpdate() {
   let [turns,setTurns] = useState(0)
@@ -40,9 +41,9 @@ function HeroUpdate() {
 
   return (
     <div  className={`h ${" h-"+facing}`} >
-      <div className="controls bg-black/40 text-white absolute bottom-0 z-20 flex w-screen justify-around text-xl sm:bottom-auto top-0">
-        <div onClick={()=>{moveBack()}} className=" p-2 cursor-pointer w-1/2 flex justify-center transition hover:bg-white hover:text-black"><AiOutlineArrowLeft /></div>
-        <div onClick={()=>{move()}} className=" p-2 cursor-pointer w-1/2 flex justify-center transition hover:bg-white hover:text-black"><AiOutlineArrowRight /></div>
+      <div className="controls md:bg-black/40 text-white absolute top-1/2 z-20 flex w-screen justify-between md:justify-around text-2xl sm:bottom-auto md:bottom-0 md:top-auto">
+        <button onClick={()=>{moveBack()}} className="bg-black/40 p-4 cursor-pointer w-auto md:w-1/2 flex justify-center transition hover:bg-white hover:text-black"><AiOutlineArrowLeft /></button>
+        <button onClick={()=>{move()}} className=" bg-black/40 p-4 cursor-pointer w-auto md:w-1/2 flex justify-center transition hover:bg-white hover:text-black relative"><div className="divider w-[2px] h-[70%] absolute bg-white/50 top-1/2 -translate-y-1/2 -left-[1px]"></div><AiOutlineArrowRight /></button>
       </div>
     <img src={greenSmall} alt="" className={`h-green-small h-small ${facing === 0? "h-green-hide":""}`} />
       <img src={orangeSmall} alt="" className={`h-orange-small h-small ${facing === 0? "h-orange-hide":""}`} />
@@ -71,7 +72,15 @@ function HeroUpdate() {
 
       </div>
       <div className="h-node-3">
-        <div className={`h-node-3-cta h-cta-white ${facing === 1? "":" h-node-3-cta-hidden"}`}>Learn More</div>
+        <div className={`h-node-3-cta h-cta-white ${facing === 1? "":" h-node-3-cta-hidden"}`}>
+              <Button2 
+                variant="bgSwoop" 
+                size ="large"
+                colors={["innov8VeryDarkGreen","innov8LightGreen"]}
+                textColors={{"from":"black","to":"white"}}>
+                  Learn More
+              </Button2>
+        </div>
         <div className={`h-node-3-cta h-cta-green ${facing === 2? "":" h-node-3-cta-hidden"}`}>Register Now</div>
         <div className="h-node-3-logo-wrapper">
           <img src={logo} alt="" className={`node-3-logo ${facing === 3 ? " node-3-logo-hidden1" : ""}`} />
